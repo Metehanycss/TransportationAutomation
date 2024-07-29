@@ -1,0 +1,21 @@
+﻿<Window x:Class="TaşımacılıkOtomasyonu.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaşımacılıkOtomasyonu"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/tasimacilik_background.jpg"/>
+        </Grid.Background>
+        <Label Content="TAŞIMACILIK OTOMASYONU" HorizontalAlignment="Center" Height="88" Margin="0,42,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="760" FontSize="48" Foreground="White" FontFamily="Segoe UI Semibold"/>
+        <Label Content="E-Posta:" HorizontalAlignment="Left" Height="32" Margin="150,173,0,0" VerticalAlignment="Top" Width="139" FontSize="20" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="White" FontFamily="Segoe UI Semibold"/>
+        <Label Content="Şifre:" HorizontalAlignment="Left" Height="32" Margin="150,227,0,0" VerticalAlignment="Top" Width="139" FontSize="20" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="White" FontFamily="Segoe UI Semibold"/>
+        <TextBox x:Name="usernameVal" HorizontalAlignment="Left" Margin="294,173,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" Height="34" FontSize="20"/>
+        <PasswordBox x:Name="passwordVal" HorizontalAlignment="Left" Margin="294,227,0,0" VerticalAlignment="Top" Width="276" Height="34"/>
+        <Button x:Name="loginButton" Content="GİRİŞ YAP" HorizontalAlignment="Left" Height="50" Margin="400,281,0,0" VerticalAlignment="Top" Width="170" FontSize="22" FontFamily="Segoe UI Semibold" Foreground="White" Background="#FF785151" Click="LoginButton_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,72 @@
+﻿<Window x:Class="TaşımacılıkOtomasyonu.RouteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaşımacılıkOtomasyonu"
+        mc:Ignorable="d"
+        Title="RouteWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/tasimacilik_background.jpg"/>
+        </Grid.Background>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="354" Margin="10,59,0,0" VerticalAlignment="Top" Width="465" SelectionChanged="dataGrid_SelectionChanged"/>
+        <ListBox x:Name="routeListBox" HorizontalAlignment="Left" Height="244" Margin="507,45,0,0" VerticalAlignment="Top" Width="283">
+            <ListBoxItem>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Başlangıç Noktası:" FontSize="18" Grid.Column="0"/>
+                    <TextBox x:Name="startLocationTextBox" FontSize="18" Margin="5,0,-116,0" Grid.Column="1"/>
+                </Grid>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Bitiş Noktası:" FontSize="18" Grid.Column="0"/>
+                    <TextBox x:Name="endLocationTextBox" FontSize="18" Margin="10,0,-158,0" Grid.Column="1"/>
+                </Grid>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Mesafe (km):" FontSize="18" Grid.Column="0"/>
+                    <TextBox x:Name="distanceTextBox" FontSize="18" Margin="5,0,-158,0" Grid.Column="1"/>
+                </Grid>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Tahmini Süre:" FontSize="18" Grid.Column="0"/>
+                    <TextBox x:Name="estimatedTimeTextBox" FontSize="18" Margin="5,0,-154,-71" Grid.Column="1">
+                        <UIElement.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </UIElement.RenderTransform>
+                    </TextBox>
+                </Grid>
+            </ListBoxItem>
+        </ListBox>
+        <Button x:Name="addButton" Content="Ekle" HorizontalAlignment="Left" Height="57" Margin="507,294,0,0" VerticalAlignment="Top" Width="131" FontSize="22" FontFamily="Segoe UI Semibold" Foreground="White" Background="#FF785151" Click="addButton_Click"/>
+        <Button x:Name="updateButton" Content="Güncelle" HorizontalAlignment="Left" Height="57" Margin="659,294,0,0" VerticalAlignment="Top" Width="131" FontSize="22" FontFamily="Segoe UI Semibold" Foreground="White" Background="#FF785151" Click="updateButton_Click"/>
+        <Button x:Name="deleteButton" Content="Sil" HorizontalAlignment="Left" Height="57" Margin="507,356,0,0" VerticalAlignment="Top" Width="131" FontSize="22" FontFamily="Segoe UI Semibold" Foreground="White" Background="#FF785151" Click="deleteButton_Click"/>
+        <Button x:Name="clearButton" Content="Temizle" HorizontalAlignment="Left" Height="57" Margin="659,356,0,0" VerticalAlignment="Top" Width="131" FontSize="22" FontFamily="Segoe UI Semibold" Foreground="White" Background="#FF785151" Click="clearButton_Click"/>
+        <Button x:Name="backButton" Content="Geri" HorizontalAlignment="Left" Height="44" Margin="10,10,0,0" VerticalAlignment="Top" Width="131" FontSize="22" FontFamily="Segoe UI Semibold" Foreground="White" Background="#FF785151" Click="backButton_Click"/>
+    </Grid>
+</Window>

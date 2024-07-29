@@ -1,0 +1,63 @@
+﻿<Window x:Class="TaşımacılıkOtomasyonu.ShipmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaşımacılıkOtomasyonu"
+        mc:Ignorable="d"
+        Title="ShipmentWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/tasimacilik_background.jpg"/>
+        </Grid.Background>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="354" Margin="10,59,0,0" VerticalAlignment="Top" Width="465" SelectionChanged="dataGrid_SelectionChanged"/>
+        <ListBox x:Name="shipmentListBox" HorizontalAlignment="Left" Height="244" Margin="507,45,0,0" VerticalAlignment="Top" Width="283">
+            <ListBoxItem>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Araç ID:" FontSize="18" Grid.Column="0"/>
+                    <TextBox x:Name="vehicleIdTextBox" FontSize="18" Margin="22,0,-195,0" Grid.Column="1"/>
+                </Grid>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Sürücü ID:" FontSize="18" Grid.Column="0"/>
+                    <TextBox x:Name="driverIdTextBox" FontSize="18" Margin="10,0,-173,0" Grid.Column="1"/>
+                </Grid>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Rota ID:" FontSize="18" Grid.Column="0"/>
+                    <TextBox x:Name="routeIdTextBox" FontSize="18" Margin="5,0,-192,0" Grid.Column="1"/>
+                </Grid>
+            </ListBoxItem>
+            <ListBoxItem>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Sevkiyat Tarihi:" FontSize="18" Grid.Column="0"/>
+                    <TextBox x:Name="shipmentDateTextBox" FontSize="18" Margin="5,0,-143,-71" Grid.Column="1"/>
+                </Grid>
+            </ListBoxItem>
+        </ListBox>
+        <Button x:Name="addButton" Content="Ekle" HorizontalAlignment="Left" Height="57" Margin="507,294,0,0" VerticalAlignment="Top" Width="131" FontSize="22" FontFamily="Segoe UI Semibold" Foreground="White" Background="#FF785151" Click="addButton_Click"/>
+        <Button x:Name="updateButton" Content="Güncelle" HorizontalAlignment="Left" Height="57" Margin="659,294,0,0" VerticalAlignment="Top" Width="131" FontSize="22" FontFamily="Segoe UI Semibold" Foreground="White" Background="#FF785151" Click="updateButton_Click"/>
+        <Button x:Name="deleteButton" Content="Sil" HorizontalAlignment="Left" Height="57" Margin="507,356,0,0" VerticalAlignment="Top" Width="131" FontSize="22" FontFamily="Segoe UI Semibold" Foreground="White" Background="#FF785151" Click="deleteButton_Click"/>
+        <Button x:Name="clearButton" Content="Temizle" HorizontalAlignment="Left" Height="57" Margin="659,356,0,0" VerticalAlignment="Top" Width="131" FontSize="22" FontFamily="Segoe UI Semibold" Foreground="White" Background="#FF785151" Click="clearButton_Click"/>
+        <Button x:Name="backButton" Content="Geri" HorizontalAlignment="Left" Height="44" Margin="10,10,0,0" VerticalAlignment="Top" Width="131" FontSize="22" FontFamily="Segoe UI Semibold" Foreground="White" Background="#FF785151" Click="backButton_Click"/>
+    </Grid>
+</Window>
